@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "conversions",
+  "info": {
+    "singularName": "conversion",
+    "pluralName": "conversions",
+    "displayName": "Conversion",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "category": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::category.category"
+    },
+    "title": {
+      "type": "string"
+    },
+    "categories": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::category.category",
+      "mappedBy": "conversions"
+    },
+    "assets": {
+      "type": "string"
+    },
+    "questions": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::question.question",
+      "inversedBy": "conversions"
+    }
+  }
+}

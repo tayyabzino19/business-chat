@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "questions",
+  "info": {
+    "singularName": "question",
+    "pluralName": "questions",
+    "displayName": "question",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "question": {
+      "type": "string"
+    },
+    "is_girl": {
+      "type": "boolean"
+    },
+    "conversions": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::conversion.conversion",
+      "inversedBy": "questions"
+    }
+  }
+}

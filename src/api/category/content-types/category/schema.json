@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "categories",
+  "info": {
+    "singularName": "category",
+    "pluralName": "categories",
+    "displayName": "Category",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "assets": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "label": {
+      "type": "enumeration",
+      "enum": [
+        "business",
+        "beginner"
+      ]
+    },
+    "conversions": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::conversion.conversion",
+      "inversedBy": "categories"
+    }
+  }
+}
